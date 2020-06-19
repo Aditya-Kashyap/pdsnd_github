@@ -20,8 +20,10 @@ import time
 import pandas as pd
 import numpy as np
 
-# The data I have specified using the Linux File System to be able to Run in this Terminal
-# I have tried it on my local first
+'''
+The data I have specified using the Linux File System to be able to Run in this Terminal
+I have tried it on my local first
+'''
 
 '''
 For Running in Local:
@@ -32,6 +34,7 @@ CITY_DATA = { 'chicago': '.\data\chicago.csv',
               'new york city': '.\data\new_york_city.csv',
               'washington': '.\data\washington.csv' }
 '''
+
 CITY_DATA = { 'chicago': '/home/workspace/chicago.csv',
               'new york city': '/home/workspace/new_york_city.csv',
               'washington': '/home/workspace/washington.csv' }
@@ -45,12 +48,14 @@ LINE_LEN = 90
 # print long string with repeating char, used to separate sections of output
 print_line = lambda char: print(char[0] * LINE_LEN)
 
+# To get the Processing Time
 def print_processing_time(start_time):
     time_str = "[... %s seconds]" % round((time.time() - start_time), 3)
     print(time_str.rjust(LINE_LEN))
     print_line('-')
 
 
+# To get Filtered City
 def get_filter_city():
     """
     Asks user to specify a city.
@@ -81,7 +86,7 @@ def get_filter_city():
     city = cities_list[city_num - 1]
     return city
 
-
+# To get the Month
 def get_filter_month():
     """
     Asks user to specify a month to filter on, or choose all.
@@ -108,7 +113,7 @@ def get_filter_month():
     
     return month
 
-
+# To get the Filtered Day
 def get_filter_day():
     """
     Asks user to specify a day to filter on, or choose all.
@@ -160,7 +165,7 @@ def get_filters():
 
     return city, month, day
 
-
+# To get the Filter Summary
 def filter_summary(city, month, day, init_total_rides, df):
     """
     Displays selected city, filters chosen, and simple stats on dataset.
@@ -187,7 +192,7 @@ def filter_summary(city, month, day, init_total_rides, df):
 
     print_processing_time(start_time)
 
-
+# To to Load the Data
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
@@ -400,7 +405,7 @@ def user_stats(df):
 
     print_processing_time(start_time)
 
-
+# To display the raw data
 def display_raw_data(df):
     """
     Asks if the user would like to see some lines of data from the filtered dataset.
@@ -430,6 +435,7 @@ def display_raw_data(df):
             break
 
 
+# Main driver program
 def main():
     while True:
         city, month, day = get_filters()
