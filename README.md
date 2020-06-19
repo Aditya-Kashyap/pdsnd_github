@@ -84,18 +84,6 @@ Through writing code for this project, I'm able to answer the following question
 ### The Interactive Experience
 For a more interactive experience, I wrote a script that took raw input in the terminal to present the statistics.
 
-## Questions explored
-The script answers the following questions about the bike share data:
-* What is the most popular month for start time?
-* What is the most popular day of week (Monday, Tuesday, etc.) for start time?
-* What is the most popular hour of day for start time?
-* What is the total trip duration and average trip duration?
-* What is the most popular start station and most popular end station?
-* What is the most popular trip?
-* What are the counts of each user type?
-* What are the counts of gender?
-* What are the earliest (i.e. oldest person), most recent (i.e. youngest person), and most popular birth years?
-
 ## Future scopes
 In the future, more functions that compute statistics will be added to answer more questions about the data. The possibilities of improving the interactive experience (e.g turning this script into a web app) will also be explored.
 
@@ -139,4 +127,4 @@ Set column widths:
 * https://pandas.pydata.org/pandas-docs/stable/generated/pandas.set_option.html
 
 Other pandas and numpy functions:
-* Lessons in the Introduction to Data Analysis section of Udacity's Data Aanaly
+* Lessons in the Introduction to Data Analysis section of Udacity's Data Aanalyst Nanodegree (DAND)
